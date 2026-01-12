@@ -1,0 +1,416 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carnatic Music Lessons (Ages 6+)</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', 'Segoe UI', sans-serif;
+      margin: 0;
+      background: linear-gradient(180deg, #fff8ef 0%, #fff3e0 100%);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(135deg, #ff8a65, #ffb74d);
+      color: white;
+      padding: 2.5rem 1rem;
+      text-align: center;
+    }
+    header h1 { margin: 0; font-size: 2.6rem; }
+    header p { margin-top: 0.75rem; font-size: 1.25rem; }
+
+    /* Floating background dots for kids */
+    section {
+      max-width: 1100px;
+      margin: 2.5rem auto;
+      padding: 1.5rem 1rem;
+      background: radial-gradient(circle at top left, #fffde7 0%, transparent 40%),
+                  radial-gradient(circle at bottom right, #e3f2fd 0%, transparent 40%);
+      border-radius: 24px;
+    }
+
+    /* Icon styles */
+    .icon-row {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      margin-top: 1.5rem;
+    }
+    .instrument {
+      width: 72px;
+      height: 72px;
+      cursor: pointer;
+      animation: bounce 2.5s ease-in-out infinite;
+    }
+    .instrument:hover::after {
+      content: attr(data-tip);
+      position: absolute;
+      background: #5d4037;
+      color: #fff;
+      padding: 6px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      transform: translate(-20%, -120%);
+      white-space: nowrap;
+    }
+
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-8px); }
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 0.8rem;
+      background: linear-gradient(90deg, #fff3e0, #ffe0b2);
+      padding: 1rem;
+      border-radius: 18px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 1.5rem;
+    }
+    nav a {
+      text-decoration: none;
+      background: #ffcc80;
+      padding: 0.6rem 1rem;
+      border-radius: 20px;
+      color: #5d4037;
+      font-weight: bold;
+      transition: transform 0.2s ease, background 0.2s ease;
+    }
+    nav a:hover {
+      background: #ffd180;
+      transform: scale(1.05);
+    }
+
+    section h2 {
+      text-align: center;
+      font-size: 2.1rem;
+      color: #e65100;
+      margin-bottom: 0.5rem;
+    }
+    .section-icon {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 1rem;
+    }
+
+    .video-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1.8rem;
+    }
+    .video-card {
+      background: linear-gradient(180deg, #ffffff, #fff8e1);
+      border-radius: 20px;
+      box-shadow: 0 6px 14px rgba(0,0,0,0.12);
+      overflow: hidden;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+    .video-card:hover {
+      transform: translateY(-8px) rotate(-0.3deg);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    }
+    .video-card iframe {
+      width: 100%;
+      height: 190px;
+      border: none;
+      background: #e0e0e0;
+    }
+    .video-card .content {
+      padding: 1rem;
+      text-align: center;
+    }
+    .video-card h3 {
+      margin: 0.5rem 0;
+      font-size: 1.25rem;
+      color: #bf360c;
+    }
+
+    footer {
+      background: linear-gradient(135deg, #ff8a65, #ff7043);
+      color: white;
+      text-align: center;
+      padding: 1.4rem;
+      margin-top: 3rem;
+      font-size: 1.05rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>🎵 Carnatic Music Lessons 🎵</h1>
+    <p>Joyful learning for ages 6 to adults</p>
+    <div class="icon-row">
+      <!-- Tambura -->
+      <svg class="instrument" data-tip="Tambura gives sruti" viewBox="0 0 64 64">
+        <circle cx="32" cy="46" r="14" fill="#8d6e63" />
+        <rect x="30" y="6" width="4" height="32" rx="2" fill="#5d4037" />
+      </svg>
+      <!-- Veena -->
+      <svg class="instrument" data-tip="Veena sings melody" viewBox="0 0 64 64">
+        <circle cx="18" cy="44" r="10" fill="#bcaaa4" />
+        <circle cx="36" cy="38" r="12" fill="#8d6e63" />
+        <rect x="34" y="10" width="4" height="28" fill="#5d4037" />
+      </svg>
+      <!-- Violin -->
+      <svg class="instrument" data-tip="Violin follows the voice" viewBox="0 0 64 64">
+        <ellipse cx="32" cy="36" rx="10" ry="14" fill="#a1887f" />
+        <rect x="30" y="6" width="4" height="18" fill="#5d4037" />
+      </svg>
+      <!-- Mridangam -->
+      <svg class="instrument" data-tip="Mridangam keeps tala" viewBox="0 0 64 64">
+        <ellipse cx="32" cy="32" rx="22" ry="14" fill="#a1887f" />
+        <ellipse cx="32" cy="32" rx="14" ry="8" fill="#6d4c41" />
+      </svg>
+    </div>
+  </header>
+  <section id="Carnatic Music">
+    <h2> About Carnatic Music</h2>
+    <div class="section-icon">
+      <span class="instrument" data-tip="Tambura gives sruti">🎵</span>
+    </div>
+
+    <!-- About Carnatic Music Text Provision -->
+    <div style="background:#fffde7;padding:1.2rem;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.1);margin-bottom:1.8rem;">
+      <p style="margin-top:0;">
+       The ancient Vedic texts like Sama Veda, Rig Veda and Yajur Veda have laid the foundation of Indian classical music. Carnatic music originated in the southern part of India and was primarily performed in Hindu temples. Gradually, it evolved from being performed during religious ceremonies into an art form. Therefore, it has a strong association with spirituality and religion, as its various compositions are in devotion to Hindu gods and goddesses. 
+
+During the reign of the Vijayanagara Empire, Carnatic music bloomed significantly. This was the time when Saint Purandara Dasa, regarded as the ‘Father of Carnatic Music’, developed the basic lessons of this genre. Along with him, Tyagaraja, Syama Sastri and Muttusvami Dikshitar, the trinity of Carnatic music, played a key role in the development of ragas, tala and the language used to convey feelings. Derived from the Sanskrit term ‘Karnataka Sangitam’, Carnatic music is known for its intricate rhythm and complex melodies. Among the most respected and oldest musical traditions in the world, it has been passed down from generation to generation in India and has its roots in the ancient Hindu scriptures. 
+      </p>
+
+      
+    </div>
+  <nav>
+    <a href="#Lesson 1">Sarali Varisai</a>
+    <a href="#Lesson 2">Janta Varisai</a>
+    <a href="#Lesson 3">Dhattu Varisai</a>
+    <a href="#Lesson 4">Upper&Lower Sthayi Varisai</a>
+    <a href="#Lesson 5">Alankarams</a>
+    <a href="#Lesson 6">Geethams</a>
+    <a href="#Lesson 7">Nottuswaram</a>
+    <a href="#Lesson 8">Krithis</a>
+    <a href="#Lesson 9">Swarajathi and Jathiswaras</a>
+    <a href="#Lesson 10">Exploring Ragas</a>
+    <a href="#Lesson 11">Shlokas</a>
+    <a href="#Lesson 12">Bhajans</a>
+    <a href="#Lesson 13">About Carnatic Composers</a>
+  </nav>
+
+
+
+    <!-- Parent Guidance -->
+    <div style="background:#fff3e0;padding:1rem;border-radius:14px;margin-bottom:1.5rem;box-shadow:0 2px 6px rgba(0,0,0,0.1)">
+      <strong>👨‍👩‍👧 Parent Guidance:</strong>
+      <p style="margin:0.5rem 0 0 0">Sit with your child, help them listen carefully, and encourage daily short practice rather than long sessions.</p>
+    </div>
+
+    <div class="video-grid">
+      <!-- Lesson Card Template -->
+      <div class="video-card" id="Lesson 1">
+        <div class="content">
+          <h3>🎵 Sarali Varisai ⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1594mvfJ6CdISWUyiLDOVFNa894tjHJ9Y?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+
+       
+          <a href="https://www.youtube.com/playlist?list=PLHyfHviKwTL4czO1swN_idga0ZjWmuxZR" target="_blank" style="display:inline-block;margin-top:0.4rem;background:#ffe082;color:#5d4037;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">
+            ▶ View Full Sarali Varisai Playlist on YouTube
+          </a>
+          </div>
+
+        </div>
+      </div>
+
+      <div class="video-card" id="Lesson 2">
+        <div class="content">
+          <h3>🥁 Janta Varisai ⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1-2K2bthPL7U-KpEeZAHXxZoCYage72B1?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          
+      </div>
+
+      <div class="video-card" id="Lesson 3">
+        <div class="content">
+          <h3>🎶 Dhattu Varisai ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1-9nvnDudm9o_XF0XmShmznVFtZ0OmiQk?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+
+       
+          </div>
+        </div>
+      </div>
+   
+
+      <div class="video-card" id="Lesson 4">
+        <div class="content">
+          <h3>🎶 Upper&Lower Sthayi Varisai ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1-A_jU-tbwp8QYKzKaMB06AicyungVaP5?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+            <a href="https://drive.google.com/drive/folders/1-BAMH1g6er8eq3wg-sOr9SarsHf5mBnF?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+
+          </div>
+
+          
+
+            
+          </div>
+        </div>
+      </div>
+    
+     <div class="video-card" id="Lesson 5">
+        <div class="content">
+          <h3>🎶 Alankarams ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1bHNjf_R1J-FDiC5FzrKvB6p-uylRU1Gj?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+
+          <!-- Alankaram YouTube Playlist -->
+        
+          <a href="https://www.youtube.com/playlist?list=PLHyfHviKwTL74_0M2Sci_iJS2Pc-F5q_g" target="_blank" style="display:inline-block;margin-top:0.4rem;background:#ffe082;color:#5d4037;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">
+            ▶ View Full Alankarams Playlist on YouTube
+          </a>
+          </div>
+          
+        </div>
+      </div>
+      </div>
+   
+     <div class="video-card" id="Lesson 6">
+        <div class="content">
+          <h3>🎶 Geethams ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1-ORj4fh3oThQ124Gha7ZEr_-GLmv2kws?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+
+         
+          <a href="https://www.youtube.com/playlist?list=PLHyfHviKwTL5G0TW_ns8n4A1_gQgtGNtK" target="_blank" style="display:inline-block;margin-top:0.4rem;background:#ffe082;color:#5d4037;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">
+            ▶ View Full Geethams Playlist on YouTube
+          </a> 
+
+            
+          </div>
+        </div>
+      </div>
+      <div class="video-card" id="Lesson 7">
+        <div class="content">
+          <h3>🎶 Nottuswarams ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1s1m7hq27B9aEEAQcd6RSRoss01rKj3h9?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+
+         
+          <a href="https://www.youtube.com/playlist?list=PLHyfHviKwTL5bh0yyrTxtHWpI4P0KKMRG" target="_blank" style="display:inline-block;margin-top:0.4rem;background:#ffe082;color:#5d4037;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">
+            ▶ View Full Nottuswarams Playlist on YouTube
+          </a> 
+
+            
+          </div>
+        </div>
+      </div>
+      <div class="video-card" id="Lesson 8">
+        <div class="content">
+          <h3>🎶 Krithis ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1-HeROKiuf7uS31dIF6NXS7MdyDvtEi1r?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+
+           
+          <a href="https://www.youtube.com/playlist?list=PLHyfHviKwTL6dfdlvw79t1LAWKBMpMWIO" target="_blank" style="display:inline-block;margin-top:0.4rem;background:#ffe082;color:#5d4037;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">
+            ▶ View Full Krithis Playlist on YouTube
+          </a> 
+        </div>
+      </div>
+      <div class="video-card" id="Lesson 9">
+        <div class="content">
+          <h3>🎶 Swarajathi and Jathiswaras⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1s1m7hq27B9aEEAQcd6RSRoss01rKj3h9?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+            
+          </div>
+        </div>
+      </div>
+      <div class="video-card" id="Lesson 10">
+        <div class="content">
+          <h3>🎶 Exploring Ragas ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://www.canva.com/design/DAG8W0nrXss/KcJ_0wWO8PkA0t0qBsK-ig/edit?utm_content=DAG8W0nrXss&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Canva Music Project</a>
+          </div>
+
+          
+
+  
+          </div>
+        </div>
+      </div>
+       <div class="video-card" id="Lesson 11">
+        <div class="content">
+          <h3>🎶 Shlokas ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1s1m7hq27B9aEEAQcd6RSRoss01rKj3h9?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+
+        
+          <a href="https://www.youtube.com/playlist?list=PLHyfHviKwTL6Qe0IcGANwIod7UgU9t94b" target="_blank" style="display:inline-block;margin-top:0.4rem;background:#ffe082;color:#5d4037;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">
+            ▶ View Full Shlokas Playlist on YouTube
+          </a> 
+
+
+            
+          </div>
+        </div>
+      </div>
+       <div class="video-card" id="Lesson 12">
+        <div class="content">
+          <h3>🎶 Bhajans ⭐⭐⭐</h3>
+          <p>Practice tips: 🕒 10 minutes daily</p>
+          <div style="margin:0.6rem 0;">
+            <a href="https://drive.google.com/drive/folders/1-4mCrQMcoGOaNabnFjRawLlNscotogz8?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
+          </div>
+        
+          <a href="https://www.youtube.com/playlist?list=PLHyfHviKwTL5iQ_KepW3T-6NpsLgcLIOu" target="_blank" style="display:inline-block;margin-top:0.4rem;background:#ffe082;color:#5d4037;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">
+            ▶ View Full Bhajans Playlist on YouTube
+          </a> 
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!-- Composers Section -->
+  <section id="Lesson 13">
+    <h2>About Composers</h2>
+    <div class="section-icon">
+      <span class="instrument" data-tip="Great composers shaped Carnatic music">📜</span>
+    </div>
+
+    <div style="background:#f3e5f5;padding:1.4rem;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.1);max-width:900px;margin:0 auto;">
+      <p style="margin:0;font-size:1rem;line-height:1.6;">
+        Carnatic music has been enriched by many great composers who expressed devotion, philosophy, and musical excellence through their compositions. Saints and composers such as <strong>Purandara Dasa</strong>, known as the Father of Carnatic Music, laid the foundation for systematic learning. The legendary Trinity — <strong>Tyagaraja</strong>, <strong>Syama Sastri</strong>, and <strong>Muttusvami Dikshitar</strong> — brought depth to raga, tala, and sahitya through thousands of timeless kritis. 
+        <br /><br />
+        Learning about composers helps students understand the meaning behind the lyrics, appreciate bhava (emotion), and connect deeply with the spiritual and cultural roots of Carnatic music. This knowledge inspires respect for the guru–shishya tradition and encourages mindful, expressive singing.
+      </p>
+    </div>
+  </section>
+
+  <footer>
+    <p>🌸 Happy Singing! 🌸</p>
+  </footer>
+</body>
+</html>
