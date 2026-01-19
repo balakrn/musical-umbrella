@@ -1,3 +1,14 @@
+<header id="top" style="text-align:center;padding:20px;background:linear-gradient(135deg,#fff3e0,#ffe0b2);border-bottom:4px solid #ffcc80;">
+  <h1 style="font-size:3rem;font-weight:800;margin:0;line-height:1.2;display:flex;align-items:center;justify-content:center;gap:16px;">
+  
+  <span>
+    <span style="color:#e53935;">S</span><span style="color:#fb8c00;">r</span><span style="color:#fdd835;">i</span><span style="color:#43a047;">v</span><span style="color:#1e88e5;">i</span><span style="color:#8e24aa;">d</span><span style="color:#e53935;">h</span><span style="color:#fb8c00;">y</span><span style="color:#fdd835;">a</span>
+    <span style="color:#4e342e;"> School Of </span>
+    <span style="color:#6a1b9a;">Music</span>
+  </span>
+</h1>
+  
+</header>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -138,7 +149,97 @@
       margin-top: 3rem;
       font-size: 1.05rem;
     }
-  </style>
+  
+/* ================= MOBILE OPTIMIZATIONS ================= */
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  header p {
+    font-size: 1rem;
+  }
+
+  .instrument {
+    width: 52px;
+    height: 52px;
+    animation: none;
+  }
+
+  .icon-row {
+    gap: 1rem;
+    flex-wrap: wrap;
+  }
+
+  nav {
+    margin: 1rem 0.5rem;
+  }
+
+  nav a {
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+  }
+
+  section {
+    padding: 1rem 0.8rem;
+  }
+
+  p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+
+  .video-card iframe {
+    height: 180px;
+  }
+
+  .video-card h3 {
+    font-size: 1.1rem;
+  }
+}
+
+/* Touch improvements */
+a {
+  touch-action: manipulation;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Go to Top link styling */
+.go-to-top {
+  display: inline-block;
+  margin-top: 1.5rem;
+  padding: 0.8rem 1.5rem;
+  background: linear-gradient(135deg, #ff8a65, #ffb74d);
+  color: white;
+  text-decoration: none;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.go-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  background: linear-gradient(135deg, #ff7043, #ffa726);
+}
+
+.go-to-top::before {
+  content: "⬆️ ";
+}
+
+@media (max-width: 600px) {
+  .go-to-top {
+    padding: 0.7rem 1.2rem;
+    font-size: 0.95rem;
+  }
+}
+
+</style>
 </head>
 <body>
   <header>
@@ -183,6 +284,9 @@ During the reign of the Vijayanagara Empire, Carnatic music bloomed significantl
       </p>
 
       
+    </div>
+    <div style="text-align:center;">
+      <a href="#top" class="go-to-top">Go to Top</a>
     </div>
   <nav>
     <a href="#Lesson 1">Sarali Varisai</a>
@@ -338,9 +442,9 @@ During the reign of the Vijayanagara Empire, Carnatic music bloomed significantl
         <div class="content">
           <h3>🎶 Swarajathi and Jathiswaras⭐⭐⭐</h3>
           <p>Practice tips: 🕒 10 minutes daily</p>
-          <div style="margin:0.6rem 0;">
+        <!--  <div style="margin:0.6rem 0;">
             <a href="https://drive.google.com/drive/folders/1s1m7hq27B9aEEAQcd6RSRoss01rKj3h9?usp=drive_link" target="_blank" style="display:inline-block;background:#c5e1a5;color:#33691e;padding:6px 12px;border-radius:14px;text-decoration:none;font-weight:bold;">🎧 Lesson Audio (Google Drive)</a>
-          </div>
+          </div> -->
             
           </div>
         </div>
@@ -392,6 +496,9 @@ During the reign of the Vijayanagara Empire, Carnatic music bloomed significantl
         </div>
       </div>
     </div>
+    <div style="text-align:center;">
+      <a href="#top" class="go-to-top">Go to Top</a>
+    </div>
 
   <!-- Composers Section -->
   <section id="Lesson 13">
@@ -402,10 +509,13 @@ During the reign of the Vijayanagara Empire, Carnatic music bloomed significantl
 
     <div style="background:#f3e5f5;padding:1.4rem;border-radius:16px;box-shadow:0 2px 6px rgba(0,0,0,0.1);max-width:900px;margin:0 auto;">
       <p style="margin:0;font-size:1rem;line-height:1.6;">
-        Carnatic music has been enriched by many great composers who expressed devotion, philosophy, and musical excellence through their compositions. Saints and composers such as <strong>Purandara Dasa</strong>, known as the Father of Carnatic Music, laid the foundation for systematic learning. The legendary Trinity — <strong>Tyagaraja</strong>, <strong>Syama Sastri</strong>, and <strong>Muttusvami Dikshitar</strong> — brought depth to raga, tala, and sahitya through thousands of timeless kritis. 
+        Carnatic music has been enriched by many great composers who expressed devotion, philosophy, and musical excellence through their compositions. Saints and composers such as <strong>Purandara Dasa</strong>, known as the Father of Carnatic Music, laid the foundation for systematic learning. The legendary Trinity — <strong>Tyagaraja</strong>, <strong>Syama Sastri</strong>, and <strong>Muthuswami Dikshitar</strong> — brought depth to raga, tala, and sahitya through thousands of timeless kritis. 
         <br /><br />
         Learning about composers helps students understand the meaning behind the lyrics, appreciate bhava (emotion), and connect deeply with the spiritual and cultural roots of Carnatic music. This knowledge inspires respect for the guru–shishya tradition and encourages mindful, expressive singing.
       </p>
+    </div>
+    <div style="text-align:center;">
+      <a href="#top" class="go-to-top">Go to Top</a>
     </div>
   </section>
 
