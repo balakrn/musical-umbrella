@@ -206,36 +206,50 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
-/* Go to Top link styling */
+/* Go to Top floating button */
 .go-to-top {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 0.8rem 1.5rem;
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 56px;
+  height: 56px;
   background: linear-gradient(135deg, #ff8a65, #ffb74d);
   color: white;
   text-decoration: none;
-  border-radius: 25px;
+  border-radius: 50%;
   font-weight: bold;
-  font-size: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  text-align: center;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  cursor: pointer;
 }
 
 .go-to-top:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 15px rgba(0,0,0,0.2);
+  transform: translateY(-5px) scale(1.05);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.3);
   background: linear-gradient(135deg, #ff7043, #ffa726);
 }
 
 .go-to-top::before {
-  content: "⬆️ ";
+  content: "⬆";
+  font-size: 1.8rem;
 }
 
 @media (max-width: 600px) {
   .go-to-top {
-    padding: 0.7rem 1.2rem;
-    font-size: 0.95rem;
+    width: 50px;
+    height: 50px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.3rem;
+  }
+  
+  .go-to-top::before {
+    font-size: 1.5rem;
   }
 }
 
@@ -284,9 +298,6 @@ During the reign of the Vijayanagara Empire, Carnatic music bloomed significantl
       </p>
 
       
-    </div>
-    <div style="text-align:center;">
-      <a href="#top" class="go-to-top">Go to Top</a>
     </div>
   <nav>
     <a href="#Lesson 1">Sarali Varisai</a>
@@ -496,9 +507,6 @@ During the reign of the Vijayanagara Empire, Carnatic music bloomed significantl
         </div>
       </div>
     </div>
-    <div style="text-align:center;">
-      <a href="#top" class="go-to-top">Go to Top</a>
-    </div>
 
   <!-- Composers Section -->
   <section id="Lesson 13">
@@ -514,10 +522,10 @@ During the reign of the Vijayanagara Empire, Carnatic music bloomed significantl
         Learning about composers helps students understand the meaning behind the lyrics, appreciate bhava (emotion), and connect deeply with the spiritual and cultural roots of Carnatic music. This knowledge inspires respect for the guru–shishya tradition and encourages mindful, expressive singing.
       </p>
     </div>
-    <div style="text-align:center;">
-      <a href="#top" class="go-to-top">Go to Top</a>
-    </div>
   </section>
+
+  <!-- Floating Go to Top Button -->
+  <a href="#top" class="go-to-top" aria-label="Go to top"></a>
 
   <footer>
     <p>🌸 Happy Singing! 🌸</p>
